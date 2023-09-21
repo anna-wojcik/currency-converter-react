@@ -1,6 +1,33 @@
-# Getting Started with Create React App
+# Currency Converter
+The subject of the project is currency converter. The calculator allows you to convert any amount in the selected currency into polish currency. 
+
+Here is a working live demo :
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Table of Contents
+* [Description](#description)
+* [Technologies Used](#technologies-used)
+* [Gif](#gif)
+* [Available Scripts](#available-scripts)
+* [Project Status](#project-status)
+* [Room for Improvment](#room-for-improvment)
+* [Acknowledgements](#acknowledgements)
+* [Author](#author)
+
+## Description
+This website depicts a currency converter. It is very easy to use. In the first gap you have to enter the amount of money. Afterwords you can choose one of five currencies. After clicking the button you will see current rate of choosen currency, given in PLN. Under the button you will get amount of converted money to PLN. 
+
+## Technologies Used
+- HTML 5
+- CSS 3
+- JavaScript ES6
+- React
+- Normalize CSS
+- BEM Convention
+
+## Gif
+![currencyConverter](https://github.com/anna-wojcik/Currency-converter/assets/139044927/8acd46da-caac-4d03-a723-f0d4ba35bd09)
 
 ## Available Scripts
 
@@ -13,11 +40,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -39,32 +61,19 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Project Status
+The project is constantly evolving with my new programming skills.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Room for Improvment
+Room for improvment:
+* Access to more currencies
+* Converting money not only to polish currency
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To do:
+* Downloading current courses from the NBP website
 
-### Code Splitting
+## Acknowledgements
+This project was inspired by the course "Frontend Developer from the basis" by online programming school YouCode. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+Created by Anna Wójcik.
