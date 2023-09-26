@@ -10,8 +10,7 @@ function App() {
     const rate = currencies.find(({ shortName }) => shortName === currency).rate;
 
     setResult({
-      fromAmount: +amount,
-      toAmount: amount / rate,
+      toAmount: amount * rate,
       currency,
       rate,
     });
