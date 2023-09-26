@@ -20,7 +20,7 @@ const Form = ({ result, calculateResult }) => {
         <p>
           <label>
             <span className="form__labelText">
-              Wpisz kwotę w zł*:
+              Wpisz kwotę*:
             </span>
             <input
               value={amount}
