@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { currencies } from "../currencies";
 import "./style.css";
+import ResultRate from "./ResultRate";
 
-const Form = () => {
+const Form = ({ result, calculateResult }) => {
   const [currency, setCurrency] = useState(currencies[0].shortName);
   const [amount, setAmount] = useState("");
 
   const onFormSubmit = (event) => {
     event.preventDefault();
+    calculateResult(currency, amount);
   };
 
   return (
@@ -55,7 +57,8 @@ const Form = () => {
           </label>
         </p>
         <p>
-          Aktualny kurs:<span className="form__paragraph--course"></span>
+          Aktualny kurs:
+          <ResultRate result={result} />
         </p>
         <button className="form__button">Przelicz</button>
         <p className="form__paragraph--centered">
