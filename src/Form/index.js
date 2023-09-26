@@ -2,6 +2,7 @@ import { useState } from "react";
 import { currencies } from "../currencies";
 import "./style.css";
 import ResultRate from "./ResultRate";
+import ResultAmount from "./ResultAmount";
 
 const Form = ({ result, calculateResult }) => {
   const [currency, setCurrency] = useState(currencies[0].shortName);
@@ -62,7 +63,8 @@ const Form = ({ result, calculateResult }) => {
         </p>
         <button className="form__button">Przelicz</button>
         <p className="form__paragraph--centered">
-          Otrzymujesz:<span></span> PLN.
+          Otrzymujesz:
+          <ResultAmount result={result} />
         </p>
         <p className="form__paragraph--fontSmall">Pola wymagane oznaczone są *</p>
       </fieldset>
