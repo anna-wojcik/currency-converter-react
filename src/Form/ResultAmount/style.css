@@ -1,0 +1,14 @@
+.result--amount {
+    color: cadetblue;
+    padding-left: 8px;
+}
+
+@media (max-width: 767px) {
+    .result--amount {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 0;
+        padding-top: 10px;
+    }
+}
