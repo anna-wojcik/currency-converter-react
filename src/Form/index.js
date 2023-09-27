@@ -57,7 +57,7 @@ const Form = ({ result, calculateResult }) => {
             </select>
           </label>
         </p>
-        <p>
+        <p className="form__paragraph--centered">
           Aktualny kurs:
           <ResultRate result={result} />
         </p>
