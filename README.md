@@ -1,4 +1,4 @@
-# Currency Converter
+# Currency Converter in React.js
 The subject of the project is currency converter. The calculator allows you to convert any amount in the selected currency into polish currency. 
 
 Here is a working live demo: https://anna-wojcik.github.io/currency-converter-react/ 
@@ -23,11 +23,12 @@ This website depicts a currency converter. It is very easy to use. In the first 
 - CSS 3
 - JavaScript ES6
 - React
+- Media Queries
 - Normalize CSS
 - BEM Convention
 
 ## Gif
-![currencyConverter](https://github.com/anna-wojcik/Currency-converter/assets/139044927/8acd46da-caac-4d03-a723-f0d4ba35bd09)
+![currency-converter-react](https://github.com/anna-wojcik/currency-converter-react/assets/139044927/5ba51c4f-07cb-4485-a6df-07beb9ee35c7)
 
 ## Available Scripts
 
