@@ -1,10 +1,10 @@
-.result--rate {
+.resultRate {
     color: cadetblue;
     padding-left: 8px;
 }
 
 @media (max-width: 767px) {
-    .result--rate {
+    .resultRate {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
