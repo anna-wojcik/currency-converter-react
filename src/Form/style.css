@@ -41,7 +41,10 @@
 
 .form__button:hover {
     background-color: hsl(182, 25%, 55%);
-    border: 1px solid cadetblue;
+}
+
+.form__button:active {
+    background-color: hsl(182, 25%, 62%);
 }
 
 .form__paragraph--centered {
