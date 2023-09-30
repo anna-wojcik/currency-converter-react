@@ -4,9 +4,20 @@ import "./style.css";
 import ResultRate from "./ResultRate";
 import ResultAmount from "./ResultAmount";
 
-const Form = ({ result, calculateResult }) => {
+const Form = () => {
   const [currency, setCurrency] = useState(currencies[0].shortName);
   const [amount, setAmount] = useState("");
+  const [result, setResult] = useState(null);
+
+  const calculateResult = () => {
+    const rate = currencies.find(({ shortName }) => shortName === currency).rate;
+
+    setResult({
+      toAmount: amount * rate,
+      currency,
+      rate,
+    });
+  };
 
   const onFormSubmit = (event) => {
     event.preventDefault();
