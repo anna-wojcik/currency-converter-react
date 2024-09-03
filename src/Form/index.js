@@ -3,6 +3,7 @@ import { currencies } from "../currencies";
 import "./style.css";
 import ResultRate from "./ResultRate";
 import ResultAmount from "./ResultAmount";
+import DateTime from "./DateTime";
 
 const Form = () => {
   const [currency, setCurrency] = useState(currencies[0].shortName);
@@ -25,11 +26,12 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={onFormSubmit}>
+    <form className="form" onSubmit={onFormSubmit}>
       <fieldset className="form__fieldset">
         <legend className="form__legend">Kalkulator walutowy</legend>
+        <DateTime />
         <p>
-          <label>
+          <label className="label--centered">
             <span className="form__labelText">
               Wpisz kwotę*:
             </span>
@@ -47,7 +49,7 @@ const Form = () => {
           </label>
         </p>
         <p>
-          <label>
+          <label className="label--centered">
             <span className="form__labelText">
               Waluta:
             </span>
