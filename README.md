@@ -16,7 +16,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * [Author](#author)
 
 ## Description
-This website depicts a currency converter. It is very easy to use. In the first gap you have to enter the amount of money. Afterwords you can choose one of five currencies. After clicking the button you will see current rate of choosen currency, given in PLN. Under the button you will get amount of converted money to PLN. 
+This website depicts a currency converter. It is very easy to use. In the first gap you have to enter the amount of money. Afterwords you can choose one of five currencies. After clicking the button you will see current rate of choosen currency, given in PLN. Under the button you will get amount of converted money to PLN. The current date and time are displayed at the top of the page.
 
 ## Technologies Used
 - HTML 5
@@ -26,9 +26,10 @@ This website depicts a currency converter. It is very easy to use. In the first 
 - Media Queries
 - Normalize CSS
 - BEM Convention
+- Hooks (useState, useEffect)
 
 ## Gif
-![currency-converter-react](https://github.com/anna-wojcik/currency-converter-react/assets/139044927/5ba51c4f-07cb-4485-a6df-07beb9ee35c7)
+![alt text](currency-converter-react-date.gif)
 
 ## Available Scripts
 
@@ -69,9 +70,6 @@ The project is constantly evolving with my new programming skills.
 Room for improvment:
 * Access to more currencies
 * Converting money not only to polish currency
-
-To do:
-* Downloading current courses from the NBP website
 
 ## Acknowledgements
 This project was inspired by the course "Frontend Developer from the basis" by online programming school YouCode. 
