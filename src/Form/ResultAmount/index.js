@@ -1,10 +1,10 @@
-import "./style.css";
+import { Content } from "./styled";
 
 const ResultAmount = ({ result }) => (
-    <span className="resultAmount">
+    <Content>
         {result && <strong>
             {result.toAmount.toFixed(2)} PLN</strong>}
-    </span>
+    </Content>
 );
 
 export default ResultAmount;
