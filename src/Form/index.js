@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { currencies } from "../currencies";
-import "./style.css";
 import ResultRate from "./ResultRate";
 import ResultAmount from "./ResultAmount";
 import DateTime from "./DateTime";
+import { StyledForm, Fieldset, Legend, Label, Content, UniversalFormElement, Paragraph, Button } from "./styled";
 
 const Form = () => {
   const [currency, setCurrency] = useState(currencies[0].shortName);
@@ -26,37 +26,39 @@ const Form = () => {
   };
 
   return (
-    <form className="form" onSubmit={onFormSubmit}>
-      <fieldset className="form__fieldset">
-        <legend className="form__legend">Kalkulator walutowy</legend>
+    <StyledForm onSubmit={onFormSubmit}>
+      <Fieldset>
+        <Legend>
+          Kalkulator walutowy
+        </Legend>
         <DateTime />
         <p>
-          <label className="label--centered">
-            <span className="form__labelText">
+          <Label>
+            <Content>
               Wpisz kwotę*:
-            </span>
-            <input
+            </Content>
+            <UniversalFormElement
+              as="input"
               value={amount}
               onChange={({ target }) => setAmount(target.value)}
-              className="form__field"
               type="number"
               name="amount"
               step="0.01"
               min="0"
               autoFocus
               required
-            />
-          </label>
+            ></UniversalFormElement>
+          </Label>
         </p>
         <p>
-          <label className="label--centered">
-            <span className="form__labelText">
+          <Label>
+            <Content>
               Waluta:
-            </span>
-            <select
+            </Content>
+            <UniversalFormElement
+              as="select"
               value={currency}
               onChange={({ target }) => setCurrency(target.value)}
-              className="form__field"
               name="currency"
             >
               {currencies.map(currency => (
@@ -67,21 +69,23 @@ const Form = () => {
                   {currency.name}
                 </option>
               ))}
-            </select>
-          </label>
+            </UniversalFormElement>
+          </Label>
         </p>
-        <p className="form__paragraph--centered">
+        <Paragraph centered>
           Aktualny kurs:
           <ResultRate result={result} />
-        </p>
-        <button className="form__button">Przelicz</button>
-        <p className="form__paragraph--centered">
+        </Paragraph>
+        <Button>Przelicz</Button>
+        <Paragraph centered>
           Otrzymujesz:
           <ResultAmount result={result} />
-        </p>
-        <p className="form__paragraph--fontSmall">Pola wymagane oznaczone są *</p>
-      </fieldset>
-    </form>
+        </Paragraph>
+        <Paragraph fontSmall>
+          Pola wymagane oznaczone są *
+        </Paragraph>
+      </Fieldset>
+    </StyledForm>
   );
 };
 
