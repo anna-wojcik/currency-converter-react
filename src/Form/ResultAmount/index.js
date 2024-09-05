@@ -1,4 +1,4 @@
-import { Content } from "./styled";
+import { Content } from "../styledResult";
 
 const ResultAmount = ({ result }) => (
     <Content>

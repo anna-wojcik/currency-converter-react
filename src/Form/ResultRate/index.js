@@ -1,13 +1,13 @@
-import "./style.css";
+import { Content } from "../styledResult";
 
 const ResultRate = ({ result }) => (
-    <span className="resultRate">
+    <Content>
         {result && (
             <>
                 1 {result.currency} = {result.rate} PLN
             </>
         )}
-    </span>
+    </Content>
 );
 
 export default ResultRate;
