@@ -1,23 +1,13 @@
-import { useEffect, useState } from "react";
 import { Paragraph } from "./styled";
+import { useCurrentDate } from "./useCurrentDate";
 
 const DateTime = () => {
-    const [dateTime, setDateTime] = useState(new Date());
+    const date = useCurrentDate();
 
-    const dayLong = dateTime.toLocaleDateString("pl-PL", { weekday: "long" });
-    const dayNumeric = dateTime.toLocaleDateString("pl-PL", { day: "numeric" });
-    const monthLong = dateTime.toLocaleDateString("pl-PL", { month: "long" });
-    const time = dateTime.toLocaleTimeString("pl-PL");
-
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setDateTime(new Date());
-        }, 1000);
-
-        return () => {
-            clearInterval(intervalId);
-        };
-    }, []);
+    const dayLong = date.toLocaleDateString("pl-PL", { weekday: "long" });
+    const dayNumeric = date.toLocaleDateString("pl-PL", { day: "numeric" });
+    const monthLong = date.toLocaleDateString("pl-PL", { month: "long" });
+    const time = date.toLocaleTimeString("pl-PL");
 
     return (
         <Paragraph>
