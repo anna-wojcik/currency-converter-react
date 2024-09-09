@@ -1,4 +1,4 @@
-import { Content } from "../styledResult";
+import { Content } from "../StyledResult";
 
 const ResultRate = ({ result }) => (
     <Content>
