@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Paragraph = styled.p`
     font-size: 13px;
-    color: rgb(95, 90, 90);
-    font-family: "Ubuntu Mono", sans-serif;
+    color: ${({ theme }) => theme.color.scorpion};
+    font-family: ${({ theme }) => theme.font.ubuntuMono}, sans-serif;
     margin-top: 20px;
     display: flex;
     justify-content: flex-end;

@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        font-family: "Lato", sans-serif;
+        font-family: ${({ theme }) => theme.font.lato}, sans-serif;
         display: flex;
         justify-content: center;
         align-items: center;
