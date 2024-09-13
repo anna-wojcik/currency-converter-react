@@ -30,20 +30,20 @@ export const UniversalFormElement = styled.input`
 `;
 
 export const Paragraph = styled.p`
-    ${({ colorCadetBlue }) => colorCadetBlue && css`
+    ${({ $colorcadetblue }) => $colorcadetblue && css`
         color: ${({theme}) => theme.color.cadetblue}
     `}
 
-    ${({ colorRed }) => colorRed && css`
+    ${({ $colorred }) => $colorred && css`
         color: ${({theme}) => theme.color.red}
     `}
 
-    ${({ centered }) => centered && css`
+    ${({ $centered }) => $centered && css`
         padding: 10px;
         text-align: center;
     `}
 
-    ${({ fontSmall }) => fontSmall && css`
+    ${({ $fontsmall }) => $fontsmall && css`
         font-size: 14px;
         color: ${({ theme }) => theme.color.scorpion};
     `}

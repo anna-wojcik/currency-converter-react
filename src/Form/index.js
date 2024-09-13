@@ -52,7 +52,7 @@ const Form = () => {
 
   if (isLoading) {
     return (
-      <Paragraph colorCadetBlue>
+      <Paragraph $colorcadetblue>
         Sekundka...
         <br />
         Ładuję kursy walut z Europejskiego Banku Centralnego...😎
@@ -60,7 +60,7 @@ const Form = () => {
     )
   } else if (error) {
     return (
-      <Paragraph colorRed>
+      <Paragraph $colorred>
         Hmm.. Coś poszło nie tak 😯 Sprawdź, czy masz połączenie z internetem.
         <br />
         Jeśli masz... to wygląda na to, że to nasza wina. Możesz spróbować później?
@@ -111,16 +111,16 @@ const Form = () => {
             </UniversalFormElement>
           </Label>
         </p>
-        <Paragraph centered>
+        <Paragraph $centered>
           Aktualny kurs:
           <ResultRate result={result} />
         </Paragraph>
         <Button>Przelicz</Button>
-        <Paragraph centered>
+        <Paragraph $centered>
           Otrzymujesz:
           <ResultAmount result={result} />
         </Paragraph>
-        <Paragraph fontSmall centered>
+        <Paragraph $fontsmall $centered>
           Kursy walut pobierane są z Europejskiego Banku Centralnego.
           <br />
           Aktualne na dzień: <b>{handleData()}</b>
