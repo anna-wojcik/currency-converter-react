@@ -34,7 +34,7 @@ The Currency converter <b>uses the API </b> from financial institutions to get t
 - BEM Convention
 
 ## Gif
-![alt text](currency-converter-react-date.gif)
+![alt text](currency-converter-api.gif)
 
 ## Available Scripts
 
