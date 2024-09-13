@@ -74,7 +74,7 @@ const Form = () => {
         <p>
           <Label>
             <Content>
-              Wpisz kwotę w zł*:
+              Wpisz kwotę*:
             </Content>
             <UniversalFormElement
               as="input"
