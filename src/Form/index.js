@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { currencies } from "../currencies";
 import ResultRate from "./ResultRate";
 import ResultAmount from "./ResultAmount";
 import { Fieldset, Label, Content, UniversalFormElement, Paragraph, Button } from "./styled";
