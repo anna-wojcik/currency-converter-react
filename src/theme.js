@@ -10,6 +10,7 @@ export const theme = {
         white: "#ffffff",
         cadetblue: "#5f9ea0",
         scorpion: "#5f5a5a",
+        red:  "#ff0000",
     },
 
     breakpoint: {
