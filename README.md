@@ -17,12 +17,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Description
 This website depicts a currency converter. It is very easy to use. In the first gap you have to enter the amount of money. Afterwords you can choose one of five currencies. After clicking the button you will see current rate of choosen currency, given in PLN. Under the button you will get amount of converted money to PLN. The current date and time are displayed at the top of the page.
+<br>
+The Currency converter <b>uses the API </b> from financial institutions to get the current exchange rates.
 
 ## Technologies Used
 - JavaScript ES6
 - React
 - HTML 5
 - CSS 3
+- axios
 - Styled Components
 - Hooks (useState, useEffect)
 - Custom Hooks
