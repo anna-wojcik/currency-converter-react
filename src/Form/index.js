@@ -44,7 +44,7 @@ const Form = () => {
     calculateResult(currency, amount);
   };
 
-  if (data.isLoading) {
+  if (data.state === "loading") {
     return (
       <Paragraph $colorcadetblue>
         Sekundka...
@@ -52,7 +52,7 @@ const Form = () => {
         Ładuję kursy walut z Europejskiego Banku Centralnego...😎
       </Paragraph>
     )
-  } else if (data.error) {
+  } else if (data.state === "error") {
     return (
       <Paragraph $colorred>
         Hmm.. Coś poszło nie tak 😯 Sprawdź, czy masz połączenie z internetem.
