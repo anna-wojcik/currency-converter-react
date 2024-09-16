@@ -9,15 +9,10 @@ const Form = () => {
   const [amount, setAmount] = useState("");
   const [result, setResult] = useState(null);
 
-  const {
-    isLoading,
-    error,
-    ratesData,
-    fullData
-  } = useRatesData();
+  const data = useRatesData();
 
-  const handleData = () => {
-    const formatedData = new Date(fullData);
+  const getYearMonthDay = () => {
+    const formatedData = new Date(data.ratesData.meta.last_updated_at);
     const year = formatedData.toLocaleDateString("pl-PL", { year: "numeric" });
     const month = formatedData.toLocaleDateString("pl-PL", { month: "2-digit" });
     const day = formatedData.toLocaleDateString("pl-PL", { day: "2-digit" });
@@ -25,7 +20,7 @@ const Form = () => {
     return `${year}-${month}-${day}`;
   };
 
-  const objectCurrencies = ratesData ? ratesData.data : null;
+  const objectCurrencies = data.ratesData ? data.ratesData.data : null;
   let currencies = [];
   let rates = [];
   for (let currency in objectCurrencies) {
@@ -38,7 +33,7 @@ const Form = () => {
     const rate = rates.at(index);
 
     setResult({
-      toAmount: amount * rate,
+      toAmount: amount / rate,
       currency,
       rate,
     });
@@ -49,7 +44,7 @@ const Form = () => {
     calculateResult(currency, amount);
   };
 
-  if (isLoading) {
+  if (data.isLoading) {
     return (
       <Paragraph $colorcadetblue>
         Sekundka...
@@ -57,7 +52,7 @@ const Form = () => {
         Ładuję kursy walut z Europejskiego Banku Centralnego...😎
       </Paragraph>
     )
-  } else if (error) {
+  } else if (data.error) {
     return (
       <Paragraph $colorred>
         Hmm.. Coś poszło nie tak 😯 Sprawdź, czy masz połączenie z internetem.
@@ -122,7 +117,7 @@ const Form = () => {
         <Paragraph $fontsmall $centered>
           Kursy walut pobierane są z Europejskiego Banku Centralnego.
           <br />
-          Aktualne na dzień: <b>{handleData()}</b>
+          Aktualne na dzień: <b>{getYearMonthDay()}</b>
         </Paragraph>
       </Fieldset>
     </form>
